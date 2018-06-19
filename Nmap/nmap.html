@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <title>My Neighbourhood</title>
+      <link rel="stylesheet"href="nmap.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   </head>
+  <body>
+    <h1>My Neighbourhood Map</h1>
+    <div id="googlemap"></div>
+    <div class="iden">
+      <div class="findings">
+        <form class="navbar-form " role="search">
+        <input class="searchbar" type="search" name="search" placeholder="Search " data-bind="value: findcity, valueUpdate: 'keyup'">
+        </form>  
+      </div>
+      <div id="placeslist">
+      <main class="container-fluid">
+        <div class="row">  
+              <div class="list-group" data-bind="foreach: citylist">
+                  <a href="#" class="list-group-item" data-bind="text: heading, click: show"></a>
+              </div>
+        </div>
+      </main>
+     </div>
+    </div>
+    <script src="knockout.js"></script>
+    <script src="nmap.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?libraries=places,drawing,geometry&key=AIzaSyB2qY4XN6IXlutSxtze5uURDvDioY0d_vU&callback=initMap" onerror="googleMapsError()"></script>
+  </body>
+  </html>

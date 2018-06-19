@@ -1,0 +1,30 @@
+#googlemap{
+  height:500px;
+  width:75%;
+}
+h1{
+  color:red;
+  background-color:black;
+  font-family:serif;
+  text-align:center;
+}
+@media screen and (min-width:300px) and (max-width:500px){
+  #googlemap{
+      width:75%;
+  }
+  #placeslist{
+      width:25%;
+  }
+}
+.findings{
+  width:25%;
+  height:50px;
+  margin-left:1050px;
+  margin-top:-500px;
+  
+}
+#placeslist{
+  width:25%;
+  height:50px;
+  margin-left:1050px;
+}
